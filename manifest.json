@@ -1,0 +1,19 @@
+{
+    "name": "Partridge",
+    "version": "0.1",
+    "description": "Browser enhancer (Personal extension, not for public)",
+    "icons": {
+        "48": "bird_48.png",
+        "128": "bird_128.png"
+    },
+    "manifest_version": 2,
+    "content_scripts": [
+        {
+          "matches": ["*://www.ruanyifeng.com/blog/*"],
+          "css": [],
+          "js": ["code/ryf.js"]
+        }
+      ],
+    "permissions": [
+      ]
+}
