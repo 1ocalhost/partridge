@@ -1,6 +1,6 @@
 {
     "name": "Partridge",
-    "version": "0.1",
+    "version": "1.18.1227",
     "description": "Browser enhancer (Personal extension, not for public)",
     "icons": {
         "48": "bird_48.png",
