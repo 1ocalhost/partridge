@@ -1,9 +1,14 @@
 (() => {
-    // Remove Ads
-    let sponsor = document.querySelector('.entry-sponsor');
-    sponsor.parentElement.removeChild(sponsor);
+  let query = document.querySelector.bind(document);
 
-    // font
-    document.querySelector('body').style.fontFamily = 'Microsoft Yahei';
-})();
+  function loadStyleSheet(path) {
+    let ele = document.createElement('link')
+    ele.setAttribute('rel', 'stylesheet')
+    ele.setAttribute('type', 'text/css')
+    ele.setAttribute('href', path)
+    query('head').appendChild(ele)
+  }
 
+  loadStyleSheet('/static/themes/theme_scrapbook/theme_scrapbook.css')
+  query('body').style.fontFamily = 'Microsoft Yahei'
+})()
