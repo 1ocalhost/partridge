@@ -2,10 +2,10 @@
 cd "$(dirname "${BASH_SOURCE[0]}")"
 read_version="import sys, json; print(json.load(sys.stdin)['version'])"
 ver_value=$(cat manifest.json | python3 -c "$read_version")
-ver_date=$(date +.%y%m%d.)
+ver_date=$(date +%y.%m%d)
 
 if [[ $ver_value != *$ver_date* ]]; then
-    echo "[$ver_value] is not contains: $ver_date"
+    echo "[$ver_value]: valid sample: 1.$ver_date.0"
     read -p "Continue? (y/n)" -n 1 -r
     echo
     if [[ ! $REPLY =~ ^[Yy]$ ]]; then
